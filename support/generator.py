@@ -72,3 +72,5 @@ create_file(path + filenames[3], '')
 
 # Create part two python file
 create_file(path + filenames[4], '')
+
+print 'Succefully generated ' + str(puzzle_year) + '.' + str(puzzle_day), 'files.'
