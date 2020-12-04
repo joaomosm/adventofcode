@@ -19,8 +19,9 @@ def read_arguments():
   return puzzle_year, puzzle_day
 
 def validate_arguments(puzzle_year, puzzle_day):
-  if puzzle_year < 2015 or puzzle_year > 2019:
-    print 'Puzzle year must be between 2015 and 2019.'
+  print puzzle_year
+  if puzzle_year < 2015 or puzzle_year > 2020:
+    print 'Puzzle year must be between 2015 and 2020.'
     exit()
   elif puzzle_day < 1 or puzzle_day > 25:
     print 'Puzzle day must be between 1 and 25.'
