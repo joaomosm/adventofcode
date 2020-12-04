@@ -1,16 +1,9 @@
-import numpy as np
-
 def parse_input(content):
   list = []
   for c in content:
     temp1 = c.split("-")
     temp2 = temp1[1].split(" ")
     temp3 = temp2[1].split(":")
-
-    min_times = temp1[0]
-    max_times = temp2[0]
-    char_to_check = temp3[0]
-    password_to_check = temp2[2]
 
     hash = {
       'min': int(temp1[0]),
