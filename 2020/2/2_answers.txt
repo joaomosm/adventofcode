@@ -1,0 +1,2 @@
+part_one = 600
+part_two = <answer_part_two>
