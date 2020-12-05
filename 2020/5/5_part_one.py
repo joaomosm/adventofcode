@@ -2,7 +2,7 @@ with open('5_part_one_input.txt') as f:
   content = f.read().splitlines()
 
 def solve_puzzle(content):
-  list = []
+  array = []
   for boarding_pass in content:
     min_row = 0
     max_row = 127
@@ -20,8 +20,8 @@ def solve_puzzle(content):
         max_column -= 8 / (2 ** (i - 6))
       
     seat_id = int(max_row * 8 + max_column)
-    list.append(seat_id)
-  return list
+    array.append(seat_id)
+  return array
 
 
 print(max(solve_puzzle(content)))
