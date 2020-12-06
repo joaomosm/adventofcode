@@ -15,17 +15,11 @@ def solve_puzzle(forms):
   array = np.zeros((len(forms),26))
   for i in range(len(forms)):
     for c in forms[i]:
-      # print('char={} for i={} forms={}'.format(c, i, forms[i]))
       char_index = ord(c) - ASCII_OFFSET
       array[i][char_index] = 1
 
-
-  # print(array)
   return int(array.sum())
-  # return 0
 
-
-# print(content)
 forms = parse_input(content)
 result = solve_puzzle(forms)
 print(result)
