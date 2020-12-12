@@ -40,6 +40,7 @@ def solve_puzzle(matrix):
         if(is_seat_empty(old_matrix[i][j]) and num_adjacent_occupied(old_matrix, i, j) == 0):
           matrix[i][j] = 2
           stable = False
+        # is 5 due to the way the adjacents seats are calculated, which include the current seat
         elif(is_seat_occupied(old_matrix[i][j]) and num_adjacent_occupied(old_matrix, i, j) >= 5):
           matrix[i][j] = 1
           stable = False
