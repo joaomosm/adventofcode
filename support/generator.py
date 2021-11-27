@@ -20,8 +20,8 @@ def read_arguments():
 
 def validate_arguments(puzzle_year, puzzle_day):
   print puzzle_year
-  if puzzle_year < 2015 or puzzle_year > 2020:
-    print 'Puzzle year must be between 2015 and 2020.'
+  if puzzle_year < 2015 or puzzle_year > 2021:
+    print 'Puzzle year must be between 2015 and 2021.'
     exit()
   elif puzzle_day < 1 or puzzle_day > 25:
     print 'Puzzle day must be between 1 and 25.'
@@ -34,9 +34,9 @@ def generate_path_and_filenames(puzzle_year, puzzle_day):
   filenames = [
     '{day}_answers.txt'.format(day = puzzle_day),
     '{day}_part_one_input.txt'.format(day = puzzle_day),
-    '{day}_part_one.py'.format(day = puzzle_day),
+    '{day}_part_one.rb'.format(day = puzzle_day),
     '{day}_part_two_input.txt'.format(day = puzzle_day),
-    '{day}_part_two.py'.format(day = puzzle_day),
+    '{day}_part_two.rb'.format(day = puzzle_day),
   ]
   try:
     os.mkdir(path)
