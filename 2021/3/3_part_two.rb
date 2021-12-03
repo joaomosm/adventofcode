@@ -3,17 +3,21 @@ require './../binary.rb'
 
 lines = read_input_chomp('3_part_two_input.txt')
 
+def select_lines(lines, index, sum, selectors)
+  lines.select do |line|
+    sum >= 0 ?
+      line[index] == selectors[0] :
+      line[index] == selectors[1]
+  end
+end
+
 def count_common_bits(lines, index, mode)
   sum = 0
-  lines.each{ |line| sum += line[index] == '1' ? 1 : -1 }
 
-  if mode == :most
-    lines.select!{|line| sum >= 0 ? line[index] == '1' : line[index] == '0' }
-  else
-    lines.select!{|line| sum >= 0 ? line[index] == '0' : line[index] == '1' }
-  end
+  lines.each { |line| sum += line[index] == '1' ? 1 : -1 }
+  selectors = mode == :most ? ['1', '0'] : ['0', '1']
 
-  lines
+  select_lines(lines, index, sum, selectors)
 end
 
 oxygen = lines.dup

@@ -11,8 +11,7 @@ lines.each do |line|
   end
 end
 
-gamma = counters.map{|char| char.to_i > 0 ? 1 : 0}.join('')
-epsilon = counters.map{|char| char.to_i < 0 ? 1 : 0}.join('')
+gamma = counters.map { |char| char.to_i > 0 ? 1 : 0 }.join('')
+epsilon = counters.map { |char| char.to_i < 0 ? 1 : 0 }.join('')
 
 puts Binary.to_decimal(gamma) * Binary.to_decimal(epsilon)
-
