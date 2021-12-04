@@ -1,6 +1,6 @@
 require './../helpers.rb'
 
-lines = read_input('1_part_two_input.txt')
+lines = read_input('1_input.txt')
 
 window = []
 increased = 0

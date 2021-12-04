@@ -1,6 +1,6 @@
 require './../helpers.rb'
 
-lines = read_input('1_part_one_input.txt')
+lines = read_input('1_input.txt')
 
 previous = nil
 increased = 0

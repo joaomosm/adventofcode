@@ -33,9 +33,8 @@ def generate_path_and_filenames(puzzle_year, puzzle_day):
   path = '{year}/{day}/'.format(year = puzzle_year, day = puzzle_day)
   filenames = [
     '{day}_answers.txt'.format(day = puzzle_day),
-    '{day}_part_one_input.txt'.format(day = puzzle_day),
+    '{day}_input.txt'.format(day = puzzle_day),
     '{day}_part_one.rb'.format(day = puzzle_day),
-    '{day}_part_two_input.txt'.format(day = puzzle_day),
     '{day}_part_two.rb'.format(day = puzzle_day),
   ]
   try:
@@ -62,16 +61,13 @@ path, filenames = generate_path_and_filenames(puzzle_year, puzzle_day)
 # Create answers file
 create_file(path + filenames[0], 'part_one = <answer_part_one>\npart_two = <answer_part_two>')
 
-# Create part one input file
+# Create part input file
 create_file(path + filenames[1], '')
 
 # Create part one python file
 create_file(path + filenames[2], '')
 
-# Create part two input file
-create_file(path + filenames[3], '')
-
 # Create part two python file
-create_file(path + filenames[4], '')
+create_file(path + filenames[3], '')
 
 print 'Succefully generated ' + str(puzzle_year) + '.' + str(puzzle_day), 'files.'
