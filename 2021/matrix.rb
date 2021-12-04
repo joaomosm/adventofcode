@@ -21,13 +21,7 @@ class Matrix
   end
 
   def is_winner?
-    @occurrences.each { |row| return true if row.sum == 5 }
-
-    @occurrences.first.size.times do |index|
-      return true if @occurrences.map { |row| row[index] }.sum == 5
-    end
-
-    return false
+    @is_winner ||= finished?
   end
 
   def mark_number(new_number)
@@ -51,5 +45,17 @@ class Matrix
     end
 
     return sum
+  end
+
+  private
+
+  def finished?
+    @occurrences.each { |row| return true if row.sum == 5 }
+
+    @occurrences.first.size.times do |index|
+      return true if @occurrences.map { |row| row[index] }.sum == 5
+    end
+
+    return false
   end
 end
