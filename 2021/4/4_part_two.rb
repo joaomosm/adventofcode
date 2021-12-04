@@ -1,5 +1,5 @@
 require './../helpers.rb'
-require './../matrix.rb'
+require './matrix.rb'
 
 def parse_input(lines)
   matrixes = []
@@ -40,7 +40,7 @@ def solve(bingo_numbers, matrixes)
   return false
 end
 
-lines = read_input_chomp('4_part_two_input.txt')
+lines = read_input_chomp('4_input.txt')
 bingo_numbers = lines.first.split(',').map{ |num| num.to_i }
 matrixes = parse_input(lines)
 

@@ -1,7 +1,7 @@
 require './../helpers.rb'
 require './../binary.rb'
 
-lines = read_input_chomp('3_part_one_input.txt')
+lines = read_input_chomp('3_input.txt')
 
 counters = Array.new(lines.first.size, 0)
 

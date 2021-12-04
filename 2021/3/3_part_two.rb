@@ -1,7 +1,7 @@
 require './../helpers.rb'
 require './../binary.rb'
 
-lines = read_input_chomp('3_part_two_input.txt')
+lines = read_input_chomp('3_input.txt')
 
 def select_lines(lines, index, sum, selectors)
   lines.select do |line|

@@ -1,6 +1,6 @@
 require './../helpers.rb'
 
-lines = read_input('2_part_one_input.txt')
+lines = read_input('2_input.txt')
 
 operations = {
   'forward' => 0,
