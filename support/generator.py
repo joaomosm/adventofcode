@@ -20,8 +20,8 @@ def read_arguments():
 
 def validate_arguments(puzzle_year, puzzle_day):
   print puzzle_year
-  if puzzle_year < 2015 or puzzle_year > 2021:
-    print 'Puzzle year must be between 2015 and 2021.'
+  if puzzle_year < 2015 or puzzle_year > 2022:
+    print 'Puzzle year must be between 2015 and 2022.'
     exit()
   elif puzzle_day < 1 or puzzle_day > 25:
     print 'Puzzle day must be between 1 and 25.'
