@@ -28,7 +28,4 @@ lines = read_input_chomp('10_input.txt')
 
 lines.each{| line| perform_cycle(line) }
 
-# puts "current_value: #{@current_value}"
-# puts "current_cycle: #{@current_cycle}"
-# puts @strength_values.inspect
 puts @strength_values.sum
