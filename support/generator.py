@@ -7,24 +7,24 @@ def read_arguments():
   args_len = len(sys.argv)
 
   if len(sys.argv) != 3:
-    print 'Wrong number of arguments:', args_len - 1, 'intead of 2.'
+    print('Wrong number of arguments:', args_len - 1, 'intead of 2.')
     exit()
   # elif:
     # TODO: safely cast arguments
 
   puzzle_year = int(sys.argv[1])
   puzzle_day = int(sys.argv[2])
-  print 'year number ->', puzzle_year,'and puzzle day ->', puzzle_day
+  print('year number ->', puzzle_year,'and puzzle day ->', puzzle_day)
 
   return puzzle_year, puzzle_day
 
 def validate_arguments(puzzle_year, puzzle_day):
-  print puzzle_year
-  if puzzle_year < 2015 or puzzle_year > 2022:
-    print 'Puzzle year must be between 2015 and 2022.'
+  print(puzzle_year)
+  if puzzle_year < 2015 or puzzle_year > 2023:
+    print('Puzzle year must be between 2015 and 2023.')
     exit()
   elif puzzle_day < 1 or puzzle_day > 25:
-    print 'Puzzle day must be between 1 and 25.'
+    print('Puzzle day must be between 1 and 25.')
     exit()
   # elif
     # TODO: prevent generating files already created
@@ -70,4 +70,4 @@ create_file(path + filenames[2], '')
 # Create part two python file
 create_file(path + filenames[3], '')
 
-print 'Succefully generated ' + str(puzzle_year) + '.' + str(puzzle_day), 'files.'
+print('Succefully generated ' + str(puzzle_year) + '.' + str(puzzle_day), 'files.')
