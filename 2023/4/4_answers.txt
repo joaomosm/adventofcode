@@ -1,2 +1,2 @@
 part_one = 24706
-part_two = <answer_part_two>
+part_two = 13114317
