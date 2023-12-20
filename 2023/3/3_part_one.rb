@@ -48,22 +48,20 @@ class Day03PartOne
   end
 
   def check_adjacents(start_index, end_index, row_index)
-    begin
-      if row_index > 0
-        return true unless lines[row_index - 1][min_x_index(start_index)..max_x_index(end_index)].match(REGEX).nil?
-      end
+    if row_index > 0
+      return true unless lines[row_index - 1][min_x_index(start_index)..max_x_index(end_index)].match(REGEX).nil?
+    end
 
-      if row_index < height - 1
-        return true unless lines[row_index + 1][min_x_index(start_index)..max_x_index(end_index)].match(REGEX).nil?
-      end
+    if row_index < height - 1
+      return true unless lines[row_index + 1][min_x_index(start_index)..max_x_index(end_index)].match(REGEX).nil?
+    end
 
-      if start_index > 0
-        return true unless lines[row_index][(start_index - 1)..end_index].match(REGEX).nil?
-      end
+    if start_index > 0
+      return true unless lines[row_index][(start_index - 1)..end_index].match(REGEX).nil?
+    end
 
-      if end_index < width - 1
-        return true unless lines[row_index][(start_index)..(end_index + 1)].match(REGEX).nil?
-      end
+    if end_index < width - 1
+      return true unless lines[row_index][(start_index)..(end_index + 1)].match(REGEX).nil?
     end
 
     return false

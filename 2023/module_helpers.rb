@@ -1,3 +1,5 @@
+require 'pry'
+
 module Helpers
   def read_input(filename)
     IO.readlines(filename)
